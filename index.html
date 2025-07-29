@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Review Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Blockchain Review Explorer</h1>
+        <p>Enter a wallet address to see all reviews given and received.</p>
+
+        <input type="text" id="addressInput" placeholder="Enter 0x... address">
+        <button id="searchButton">Search</button>
+
+        <div id="loader" class="loader" style="display: none;"></div>
+        <p id="errorMessage" class="message"></p>
+
+        <div class="results-container">
+            <div id="reviewsReceived">
+                <h2>Reviews Received</h2>
+                <ul id="receivedList"></ul>
+            </div>
+            <div id="reviewsGiven">
+                <h2>Reviews Given</h2>
+                <ul id="givenList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>
